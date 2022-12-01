@@ -16,16 +16,12 @@ router.get('/path', (ctx, next) => {
   let tmp = root
 
   while (path.length > 0) {
-    console.log(path)
     const curName = path.shift()
-    console.log(curName)
     tmp = tmp.children[curName]
     if (!tmp.children) tmp = curName
-    console.log('---')
   }
 
   let structure, type
-  console.log({ tmp })
   if (tmp.children) {
     structure = Object.keys(tmp.children).reduce((acc, name) => {
       acc[name] = tmp.children[name].type

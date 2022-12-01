@@ -16,7 +16,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  overflow: scroll;
   height: 1.5em;
 `
 
